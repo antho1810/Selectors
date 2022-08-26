@@ -1,0 +1,142 @@
+/* Selector universal */
+/* *{
+    background-color: aqua;
+    padding: 10px;
+} */
+/* Selector de etiqueta */
+
+body {
+  font-family: Verdana, sans-serif;
+}
+li {
+  color: slateblue;
+  font: 14px;
+}
+
+/* Selector de clase */
+
+.peliculas {
+  color: crimson;
+  font-size: 26px;
+}
+
+.series{
+    font-size: 40px;
+}
+
+.favoritas{
+    font-weight: bold;
+    color: rebeccapurple;
+    font-size: 25px;
+}
+
+.espaciado{
+    letter-spacing: 10px;
+}
+
+/* Selector de ID */
+#spidermanNoWayHome{
+    font-size: 25px;
+    color: tomato;
+    text-decoration: underline;
+}
+
+#temporada3{
+    color: green;
+    font-size: 24px;
+}
+
+/* Combinador de descendientes */
+ul .lista{
+    text-decoration: underline;
+}
+
+.todo .lista{
+    list-style: decimal;
+}
+
+.dias .lista{
+    list-style: none;
+    background-color: aqua;
+}
+
+/* Combinador de hijos de directos */
+.listas > .lista{
+    list-style: lower-roman;
+    background-color: azure;
+}
+
+.dias > .lista{
+    list-style: lower-latin;
+    color: orange;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Combinador de hermno adyacente: pone el estilo al etiqueta que le sigue */
+.subtitulo + *{
+    background-color: yellow;
+}
+
+.subtitulo + .parrafo{
+    background-color: chartreuse;
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.parrafo{
+    background-color: red;
+}
+
+.subtitulo:hover + .parrafo{
+    height: 50px;
+    opacity: 1;
+    background-color: steelblue;
+}
+
+/* Combinador de hermanos generales: coge todos los hermanos que cumplan con el selector */
+.subtitulo ~ .parrafo{
+    background-color: blueviolet;
+}
+
+/* Selector por atributo */
+[type]{
+    background-color: chocolate;
+}
+
+[value]{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* toma todos los los componentes que tengan un type=submit */
+[type="submit"]{ 
+    background-color: darkgoldenrod;
+}
+
+/* mira quien tiene la condicion y si hay componentes que lo tenga lo pone */
+[value~="Aqui"]{
+    background-color: crimson;
+}
+
+/* Toma los que contengan el siguiente sufijo en ellos */
+[value^="Aquí"]{
+    background-color: darkmagenta;
+}
+
+/* Toma los que termina con el siguiente prefijo en ellos */
+[value$="introducé"]{
+background-color: darksalmon;
+}
+
+/* Toma todos los que cumplan la condicion no importa si esta alterada  */
+[value*="intruducé"]{
+    background-color: green;
+}
+
+  
+
+
+
