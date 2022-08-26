@@ -136,7 +136,10 @@ background-color: darksalmon;
     background-color: green;
 }
 
-  
+.BEM a{
+    text-decoration: none;
+
+}
 
 
 
